@@ -260,7 +260,23 @@
 <div class="reveal">
   <div class="slides">
 
-    <!-- 1. SPEAKER -->
+    <!-- 1. TITLE -->
+    <section class="title-slide" data-background-color="#0c2438">
+      <h1>Solo <span style="color:var(--signal)">+</span><br>hiero&#8209;solo&#8209;action</h1>
+      <div class="rule"></div>
+      <p class="lead">Deploy, manage, and automate a private Hiero / Hedera test network</p>
+      <p class="mono-sub" style="margin-top:1.2em;">
+        No. HSA&#8209;001 &nbsp;·&nbsp; Rev A &nbsp;·&nbsp; Sheet 01/16
+      </p>
+      <p style="margin-top:.8em;">
+        <span class="chip">Solo CLI</span>
+        <span class="chip">GitHub Action</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">CI / CD</span>
+      </p>
+    </section>
+
+    <!-- 2. SPEAKER -->
     <section class="title-slide" data-background-color="#0c2438">
       <div class="title-layout">
         <div>
@@ -274,7 +290,7 @@
             <li><strong>Committer</strong> at Hiero</li>
           </ul>
           <p class="mono-sub" style="margin-top:1.2em;">
-            No. HSA&#8209;001 &nbsp;·&nbsp; Rev A &nbsp;·&nbsp; Sheet 01/16
+            No. HSA&#8209;001 &nbsp;·&nbsp; Rev A &nbsp;·&nbsp; Sheet 02/16
           </p>
         </div>
         <aside class="speaker">
@@ -282,22 +298,6 @@
           <p class="speaker-name">Noah</p>
         </aside>
       </div>
-    </section>
-
-    <!-- 2. TITLE -->
-    <section class="title-slide" data-background-color="#0c2438">
-      <h1>Solo <span style="color:var(--signal)">+</span><br>hiero&#8209;solo&#8209;action</h1>
-      <div class="rule"></div>
-      <p class="lead">Deploy, manage, and automate a private Hiero / Hedera test network</p>
-      <p class="mono-sub" style="margin-top:1.2em;">
-        No. HSA&#8209;001 &nbsp;·&nbsp; Rev A &nbsp;·&nbsp; Sheet 02/16
-      </p>
-      <p style="margin-top:.8em;">
-        <span class="chip">Solo CLI</span>
-        <span class="chip">GitHub Action</span>
-        <span class="chip">Kubernetes</span>
-        <span class="chip">CI / CD</span>
-      </p>
     </section>
 
     <!-- 3. THE PROBLEM -->
@@ -435,24 +435,9 @@
       <p class="muted small" style="font-family:var(--mono);">// Solo's whole job: install and wire these together for you.</p>
     </section>
 
-    <!-- 8. WHAT GETS DEPLOYED -->
+    <!-- 8. WHAT SOLO IS -->
     <section data-background-color="#0c2438">
-      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>What Gets Deployed</span><span class="sheet">Sheet 08/16</span></div>
-      <h2>What gets deployed</h2>
-      <table style="margin-top:.4em;">
-        <thead><tr><th style="width:32%;">Component</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Consensus Node</strong></td><td>Hiero consensus node for processing transactions.</td></tr>
-          <tr><td><strong>Mirror Node</strong></td><td>Stores and serves historical transaction data.</td></tr>
-          <tr><td><strong>Explorer UI</strong></td><td>Web interface for viewing accounts and transactions.</td></tr>
-          <tr><td><strong>JSON RPC Relay</strong></td><td>Ethereum-compatible JSON RPC interface.</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- 9. WHAT SOLO IS -->
-    <section data-background-color="#0c2438">
-      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>The Tool Itself</span><span class="sheet">Sheet 09/16</span></div>
+      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>The Tool Itself</span><span class="sheet">Sheet 08/16</span></div>
       <h2>What Solo <em class="k">is</em></h2>
       <p class="lead">"An opinionated CLI tool to deploy and manage standalone test networks."</p>
       <div class="grid2" style="margin-top:.5em;">
@@ -473,9 +458,9 @@
       </div>
     </section>
 
-    <!-- 10. DEPENDENCY STACK -->
+    <!-- 9. DEPENDENCY STACK -->
     <section data-background-color="#0c2438">
-      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>Runtime Stack</span><span class="sheet">Sheet 10/16</span></div>
+      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>Runtime Stack</span><span class="sheet">Sheet 09/16</span></div>
       <h2>The dependency stack</h2>
       <div class="trace" style="margin-top:.8em; font-size:.68em;">
         <span class="node">DOCKER</span><span class="seg"></span>
@@ -491,9 +476,9 @@
       </div>
     </section>
 
-    <!-- 11. ONE-SHOT -->
+    <!-- 10. ONE-SHOT -->
     <section data-background-color="#0c2438">
-      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>Procedure · Fast Path</span><span class="sheet">Sheet 11/16</span></div>
+      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>Procedure · Fast Path</span><span class="sheet">Sheet 10/16</span></div>
       <h2>One-Shot: a network in one command</h2>
       <pre><code class="language-bash" data-trim>solo one-shot single deploy</code></pre>
       <div class="grid2" style="margin-top:.2em;">
@@ -520,6 +505,21 @@
       </div>
       <p class="muted small fragment fade-in" style="font-family:var(--mono);">// Tear down: solo one-shot single destroy</p>
       <p class="muted small fragment fade-in" style="font-family:var(--mono);">// Slow machine? add --no-parallel-deploy (the parallel stages can race)</p>
+    </section>
+
+    <!-- 11. WHAT GETS DEPLOYED -->
+    <section data-background-color="#0c2438">
+      <div class="tblock"><span class="doc">HSA&#8209;001</span><span>What Gets Deployed</span><span class="sheet">Sheet 11/16</span></div>
+      <h2>What gets deployed</h2>
+      <table style="margin-top:.4em;">
+        <thead><tr><th style="width:32%;">Component</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Consensus Node</strong></td><td>Hiero consensus node for processing transactions.</td></tr>
+          <tr><td><strong>Mirror Node</strong></td><td>Stores and serves historical transaction data.</td></tr>
+          <tr><td><strong>Explorer UI</strong></td><td>Web interface for viewing accounts and transactions.</td></tr>
+          <tr><td><strong>JSON RPC Relay</strong></td><td>Ethereum-compatible JSON RPC interface.</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- 12. KEYS + ACCOUNTS -->
@@ -605,7 +605,6 @@
           <p class="muted small">Use case: run integration tests against a fresh, isolated network on every push.</p>
         </div>
       </div>
-      <p class="muted small fragment fade-in" style="margin-top:.5em; font-family:var(--mono); color:var(--signal);">⚠ CI runners need ≥ 6 CPU cores and ≥ 12 GB RAM.</p>
     </section>
 
     <!-- 16. SUMMARY -->
